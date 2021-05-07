@@ -34,18 +34,38 @@ ATURAN CODING:
 */
 
 function miniSudokuBoard(text) {
-  
+  // return text.length;
+  if (text.length == 0) {
+    return `Empty board`;
+  }
+  if (text.length !== 9) {
+    return `Invalid input`;
+  } else {
+    let baris = 3;
+    let kolom = 3;
+
+    let i = 0;
+
+    let hasil = [[]];
+    for (let r = 0; r < baris; ++r) {
+      hasil[r] = [];
+      for (let c = 0; c < kolom; ++c) {
+        hasil[r][c] = text[i++];
+      }
+    }
+    return hasil;
+  }
 }
 
-console.log(miniSudokuBoard('005030081'));
+console.log(miniSudokuBoard("005030081"));
 // /[ [ '0', '0', '5' ], [ '0', '3', '0' ], [ '0', '8', '1' ] ]
-console.log(miniSudokuBoard('105802000'));
+console.log(miniSudokuBoard("105802000"));
 // [ [ '1', '0', '5' ], [ '8', '0', '2' ], [ '0', '0', '0' ] ]
-console.log(miniSudokuBoard('608730000'));
+console.log(miniSudokuBoard("608730000"));
 // [ [ '6', '0', '8' ], [ '7', '3', '0' ], [ '0', '0', '0' ] ]
-console.log(miniSudokuBoard('096040001'));
+console.log(miniSudokuBoard("096040001"));
 // [ [ '0', '9', '6' ], [ '0', '4', '0' ], [ '0', '0', '1' ] ]
-console.log(miniSudokuBoard('87109'));
+console.log(miniSudokuBoard("87109"));
 // Invalid input
-console.log(miniSudokuBoard(''));
+console.log(miniSudokuBoard(""));
 // Empty board

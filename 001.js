@@ -26,30 +26,49 @@ ATURAN CODING:
   - .splice()
 */
 
-function subsLocator(grid){
+function subsLocator(grid) {
   // your code here
-  
+  let posisi = [];
+  for (let i = 0; i < grid.length; i++) {
+    // posisi.push(i);
+    for (let j = 0; j < grid.length; j++) {
+      // posisi.push(j);
+      console.log(grid[j]);
+      if (grid[j] == "*") {
+        posisi.push(j);
+      }
+    }
+  }
+  return posisi;
 }
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '*']
-])); // [2, 2]
+console.log(
+  subsLocator([
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", "*"],
+  ])
+); // [2, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '*', ''],
-  ['', '', '']
-])); // [1, 1]
+console.log(
+  subsLocator([
+    ["", "", ""],
+    ["", "*", ""],
+    ["", "", ""],
+  ])
+); // [1, 1]
 
-console.log(subsLocator([
-  ['', '', '*'],
-  ['', '', ''],
-  ['', '', '']
-])); // [0, 2]
+console.log(
+  subsLocator([
+    ["", "", "*"],
+    ["", "", ""],
+    ["", "", ""],
+  ])
+); // [0, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
-])); // No drone
+console.log(
+  subsLocator([
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""],
+  ])
+); // No drone

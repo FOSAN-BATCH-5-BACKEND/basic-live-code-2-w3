@@ -31,14 +31,24 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
-
+  let balikArray = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    // reversed += arr[i];
+    let balikKata = "";
+    for (let j = arr[i].length - 1; j >= 0; j--) {
+      // console.log(arr[i][j]);
+      balikKata += arr[i][j];
+    }
+    // console.log(balikKata);
+    balikArray.push(balikKata);
+  }
+  return balikArray;
 }
 
-console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
+console.log(throwbackMe(["dimitri", "sergei", "alexei"]));
 // ['iexela', 'iegres', 'irtimid']
 
-console.log(throwbackMe(['kira', 'lawliet', 'near', 'mello']));
+console.log(throwbackMe(["kira", "lawliet", "near", "mello"]));
 // [ 'ollem', 'raen', 'teilwal', 'arik' ]
 
 console.log(throwbackMe([]));
