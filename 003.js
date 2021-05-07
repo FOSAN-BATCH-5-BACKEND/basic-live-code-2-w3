@@ -34,7 +34,23 @@ ATURAN CODING:
 */
 
 function miniSudokuBoard(text) {
-  
+  let sudo = [""];
+  // let miniSudokuBoard = Array.from((text), Number);
+  if (text.length == sudo){
+    return `Empty board`
+  } else if (text.length < 9){
+    return `Invalid input`
+  } else {
+ 
+  for (let i = 0; i < text.length; i++){
+    for (let j = 0; j < text[i].length; j++) {
+      sudo += text[i][j] + ",";
+    //  while (text.length == 9){
+    //    text += Array.from((text), number)
+    //  }
+    }
+  } return sudo;
+  }
 }
 
 console.log(miniSudokuBoard('005030081'));

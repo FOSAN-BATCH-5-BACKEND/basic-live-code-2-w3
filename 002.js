@@ -31,10 +31,19 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
-
+  let word = [];
+  if (arr.length == word){
+    return `[]`
+  } else {
+  for (let i = arr.length - 1; i >= 0; i--){
+    for (let j =arr[i].length - 1; j>= 0; j--) {
+      word += arr[i][j] + " ";
+      
+    }
+  }
+  }
+  return `${word}`;
 }
-
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
 // ['iexela', 'iegres', 'irtimid']
 
