@@ -26,10 +26,23 @@ ATURAN CODING:
   - .splice()
 */
 
-function subsLocator(grid){
-  // your code here
-  
-}
+  function subsLocator(grid){
+  let penampung=[];
+
+  for (let i=0; i <= grid.length; i++){
+    if(grid [i]== '*'){
+      penampung.push(grid[i])
+    }
+  }
+
+} 
+
+
+
+
+
+
+
 console.log(subsLocator([
   ['', '', ''],
   ['', '', ''],
