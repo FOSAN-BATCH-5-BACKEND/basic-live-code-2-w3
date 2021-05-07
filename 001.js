@@ -27,7 +27,9 @@ ATURAN CODING:
 */
 
 function subsLocator(grid){
-  // your code here
+  for(let i = 0; i < grid.length; i++){
+    console.log(grid[i]);
+  }
   
 }
 console.log(subsLocator([
@@ -36,20 +38,20 @@ console.log(subsLocator([
   ['', '', '*']
 ])); // [2, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '*', ''],
-  ['', '', '']
-])); // [1, 1]
+// console.log(subsLocator([
+//   ['', '', ''],
+//   ['', '*', ''],
+//   ['', '', '']
+// ])); // [1, 1]
 
-console.log(subsLocator([
-  ['', '', '*'],
-  ['', '', ''],
-  ['', '', '']
-])); // [0, 2]
+// console.log(subsLocator([
+//   ['', '', '*'],
+//   ['', '', ''],
+//   ['', '', '']
+// ])); // [0, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
-])); // No drone
+// console.log(subsLocator([
+//   ['', '', ''],
+//   ['', '', ''],
+//   ['', '', '']
+// ])); // No drone
