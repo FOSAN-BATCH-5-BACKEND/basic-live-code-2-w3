@@ -34,7 +34,17 @@ ATURAN CODING:
 */
 
 function miniSudokuBoard(text) {
-  
+  let angka = 0
+  let array = [];
+  for(let i = 0; i < text.length; i++){
+    // angka += 1;
+    // console.log(text[i])
+    array.push(text[i]);
+    // if(angka == 3){
+    //   array = '';
+    // }
+  }
+  return array
 }
 
 console.log(miniSudokuBoard('005030081'));

@@ -31,15 +31,25 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
-
+  let hasil = [];
+  for (let i = 0; i<=arr.length; i++){
+    // let data = true
+    for (let j = arr[i].length; j >= 0; j--){
+      // console.log(arr[i][j])
+      // if (arr[i][j] == ' '){
+        hasil.push(arr[i][j])
+      // }
+    }
+  }
+  return hasil
 }
+
 
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
 // ['iexela', 'iegres', 'irtimid']
 
-console.log(throwbackMe(['kira', 'lawliet', 'near', 'mello']));
-// [ 'ollem', 'raen', 'teilwal', 'arik' ]
+// console.log(throwbackMe(['kira', 'lawliet', 'near', 'mello']));
+// // [ 'ollem', 'raen', 'teilwal', 'arik' ]
 
-console.log(throwbackMe([]));
+// console.log(throwbackMe([]));
 // []

@@ -27,20 +27,36 @@ ATURAN CODING:
 */
 
 function subsLocator(grid){
-  // your code here
+  let pertama = 0
+  let kedua = 0
+  for (let i = 0; i <= grid.length; i++){
+    // console.log(grid[i])
+    for (let j = 0; j <= grid[i].length; j++){
+      // console.log(j);
+
+        if (grid[i][j] == '*' ){
+          // pertama += i
+          kedua += j
+        
+        }
+      return kedua;
+    }
+
+  }
+  
   
 }
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '*']
-])); // [2, 2]
+// console.log(subsLocator([
+//   ['', '', ''],
+//   ['', '', ''],
+//   ['', '', '*']
+// ])); // [2, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '*', ''],
-  ['', '', '']
-])); // [1, 1]
+// console.log(subsLocator([
+//   ['', '', ''],
+//   ['', '*', ''],
+//   ['', '', '']
+// ])); // [1, 1]
 
 console.log(subsLocator([
   ['', '', '*'],
@@ -48,8 +64,8 @@ console.log(subsLocator([
   ['', '', '']
 ])); // [0, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
-])); // No drone
+// console.log(subsLocator([
+//   ['', '', ''],
+//   ['', '', ''],
+//   ['', '', '']
+// ])); // No drone
