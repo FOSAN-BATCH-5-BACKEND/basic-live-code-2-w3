@@ -35,7 +35,19 @@ ATURAN CODING:
 
 function howManyMore(maxBudget, gifts) {
   // your code here
-  
+
+  let giftSorted = gifts.sort(function(a,b) { return a-b});
+
+  let sum = 0;
+  let count = 0;
+
+  for (let i=0; i<giftSorted.length; i++) {
+      if (sum < maxBudget) {
+          sum += giftSorted[i];
+          count += 1;
+      }
+  }
+  return count
 }
 
 

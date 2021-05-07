@@ -28,8 +28,17 @@ ATURAN CODING:
 
 function subsLocator(grid){
   // your code here
-  
+ 
+  for (let i = 0; i < grid.length; i++) {
+     console.log(grid[i]);
+  }
 }
+
+
+
+
+
+
 console.log(subsLocator([
   ['', '', ''],
   ['', '', ''],

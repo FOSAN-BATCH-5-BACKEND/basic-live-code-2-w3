@@ -31,9 +31,17 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
 
-}
+      let penampung = [];
+      for(let i = arr.length-1; i>=0; i--){
+          penampung.push(arr[i]);
+      }
+      return penampung;
+    }
+      for (let j = penampung.length -1; j >= 0; j--) {
+        penampung++
+      }
+
 
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
 // ['iexela', 'iegres', 'irtimid']
