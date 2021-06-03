@@ -27,7 +27,26 @@ ATURAN CODING:
 */
 
 function subsLocator(grid){
-  // your code here
+  let penampung = []
+  for (let i = 0; i <= grid.length; i++){
+    // console.log(grid[i])
+    for (let j = 0; j <= grid[i].length; j++){
+      // console.log(j);
+
+        if (grid[i][j] == '*' ){
+         penampung.push(i)
+         penampung.push(j)
+        
+        }
+        else{
+          return 'No drone'
+        }
+      
+    }
+    
+      return penampung
+  }
+  
   
 }
 console.log(subsLocator([
