@@ -32,24 +32,29 @@ ATURAN CODING:
 
 function throwbackMe(arr) {
   let hasil = [];
-  for (let i = 0; i<=arr.length; i++){
-    // let data = true
-    for (let j = arr[i].length; j >= 0; j--){
-      // console.log(arr[i][j])
-      // if (arr[i][j] == ' '){
-        hasil.push(arr[i][j])
-      // }
-    }
+  let hasil2 = []
+  for (let i = arr.length-1; i >= 0; i--){
+    hasil.push(arr[i])
   }
-  return hasil
+  for(let i = 0; i < hasil.length; i++){
+    let penampung = ''
+    for(let j = hasil[i].length-1; j >= 0; j--){
+      penampung += hasil[i][j]
+    }
+    // console.log(penampung)
+    hasil2.push(penampung)
+  }
+  
+  
+  return hasil2
 }
 
 
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
 // ['iexela', 'iegres', 'irtimid']
 
-// console.log(throwbackMe(['kira', 'lawliet', 'near', 'mello']));
-// // [ 'ollem', 'raen', 'teilwal', 'arik' ]
+console.log(throwbackMe(['kira', 'lawliet', 'near', 'mello']));
+// [ 'ollem', 'raen', 'teilwal', 'arik' ]
 
-// console.log(throwbackMe([]));
+console.log(throwbackMe([]));
 // []
